@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    background-color: rgb(30, 136, 229);
+    width: 100vw;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: aliceblue;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a div {
+    margin-left: 10px;
+}
+
+.navbar a img {
+    width: 4vw;
+}
+
+.navbar .search_bar {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 786px) and (max-width: 1024px) {
+    .navbar a img {
+        width: 6vw;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 786px) {
+    .navbar a img {
+        width: 9vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar a img {
+        display: none;
+    }
+}
+
+
+
+/*----php form -----*/
+<form  method="post" enctype="multipart/form-data" class="p-5">
+<div class="d-flex w-100">
+    <div class="w-75"> 
+        <div class="form-group d-flex">
+        <label for="Name" class="fs-4 w-25">First Name:</label>
+        <input type="text" class="form-control fs-4"  placeholder="Enter First Name" name="fname">
+        </div>
+        <div class="form-group d-flex">
+        <label for="name" class="fs-4 w-25">Last Name:</label>
+        <input type="text" class="form-control fs-4"  placeholder="Enter Last Name" name="lname">
+        </div>
+        <div class="form-group d-flex">
+        <label for="username" class="fs-4 w-25">Username:</label>
+        <input type="text" class="form-control fs-4"  placeholder="Enter Username" name="username">
+        </div>
+        <div class="form-group d-flex">
+        <label for="email" class="fs-4 w-25">Email:</label>
+        <input type="email" class="form-control fs-4 " id="email" placeholder="Enter email" name="email">
+        </div>
+    </div>
+    <div class="w-25 m-3 p-5 pt-2">
+        <!-- <div class=" mt-5"> -->
+            <label for="email" class="fs-4 text-center">Profile Image:</label>
+            <input type="file" name="image" class="fs-4">
+        <!-- </div> -->
+    </div>
+</div>
+<div class="d-flex w-100">
+    <div class="form-group d-flex w-50">
+        <label for="email" class="fs-4 w-25 me-5 pe-3">Phone:</label>
+        <input type="number" minlength="10" maxlength="10" class="form-control fs-4 ms-5"  placeholder="Enter Your number " name="phone">
+    </div>
+    <div class="form-group d-flex w-50 ">
+        <label for="email" class="fs-4 w-25 ms-5">Birthday :</label>
+        <input type="date" class="form-control fs-4"  placeholder="Enter your birthday" name="birthday">
+    </div>
+</div>
+<div class=" d-flex">
+    <div class="form-group d-flex w-50 ">
+        <label for="gender" class="fs-4  w-25">Gender:</label>
+        <input type="radio" class="m-3 fs-4 ms-5" value="Male"   name="gender">
+        <label for="gender" class="fs-4">Male</label>
+        <input type="radio" class="m-3 fs-4" value="Female"   name="gender">
+        <label for="gender" class="fs-4">Female</label>
+        <input type="radio" class="m-3 fs-4" value="Other"   name="gender">
+        <label for="email" class="fs-4">Other</label>
+    </div>
+    <div class="form-group d-flex w-50 ps-4">
+        <label for="education" class="fs-4 m-3 ms-4">Education:</label>
+        <input type="checkbox" class=" fs-4 m-3 ms-5 me-1" value="10th"  name="education[]">
+        <label for="education" class="fs-4 m-3 me-5">10th</label>
+        <input type="checkbox" class=" fs-4 m-3 me-1" value="12th"  name="education[]">
+        <label for="education" class="fs-4 m-3 me-5 ">12th</label>
+        <input type="checkbox" class=" fs-4 m-3 me-1" value="Graduation"  name="education[]">
+        <label for="education" class="fs-4 m-3">Graduation</label>
+    </div>
+</div>
+
+<!-- further code for address part  -->
+<div class="d-flex w-100">
+    <label for="address" class="fs-2 m-1 ms-1 me-5 pe-5"> Address :</label>
+    <!-- city code starts here  -->
+    <div class="form-group d-flex w-25 ms-4">
+        <label for="cityname" class="fs-4 m-2">City :</label>
+        <select name="city"  value="" class=" fs-4 p-2 ps-3">
+            <option value="" class="">Select your city</option>
+            <option value="Dehradun" class="">Dehradun</option>
+            <option value="Rudraprayag" class="">Rudraprayag</option>
+            <option value="Srinagar" class="">Srinagar</option>
+            <option value="Guptakashi" class="">Guptakashi</option>
+        </select>
+    </div>
+    <!-- city code ends here  -->
+    <!-- distict code starts here  -->
+    <div class="form-group d-flex w-25">
+        <label for="DistrictName" class="fs-4 m-2 ">District :</label>
+        <select name="district" id="" class="fs-4 p-2 ">
+            <option value="" class="">Select Your District</option>
+            <option value="Dehradun" class="">Dehradun</option>
+            <option value="Rudraprayag" class="">Rudraprayag</option>
+            <option value="Pauri" class="">Pauri</option>
+            <option value="Chamoli" class="">Chamoli</option>
+            <option value="Haridwar" class="">Haridwar</option>
+        </select>
+    </div>
+    <!-- district code ends here  -->
+    <!-- pincode/zipcode code starts here  -->
+    <div class="form-group d-flex w-25">
+    <label for="email" class="fs-4 m-2">Pincode:</label>
+    <input type="text" class="p-3 ms-4 fs-4 "  name="pincode" minlength="6" maxlength="6">
+    </div>
+    <!-- pincode/zipcode code ends here  -->
+</div>
+<!-- address code ends here  -->
+<!-- password code starts here  -->
+<div class="form-group  w-100">
+    <!-- password  -->
+    <div class="form-group d-flex w-75">
+        <label for="pwd" class="fs-4 w-25">Password:</label>
+        <input type="password" class="form-control fs-4"  placeholder="Enter password" name="password">
+    </div>
+    <!-- confirm password -->
+    <div class="form-group d-flex w-75">
+        <label for="pwd" class="fs-4 w-25">Confirm Password:</label>
+        <input type="password" class="form-control fs-4"placeholder="Confirm password" name="c_password">
+    </div>
+</div>
+<!-- password code ends here  -->
+<button type="submit" class="btn btn-primary  fs-4" name="submit" value="">Submit</button>
+</form>

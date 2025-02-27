@@ -1,0 +1,128 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* background: rgb(37,203,45); */
+    background: linear-gradient(45deg, rgba(37,203,45,0.9473039215686274) 11%, rgba(37,201,203,1) 35%, rgba(71,8,154,1) 67%, rgba(232,49,49,1) 100%);
+    display:flex;
+    height: 100vh;
+    justify-content:center;
+    padding-bottom: 5%;
+}
+@media screen and (max-width: 786px) {
+    body{display: block;
+        
+     }
+
+     .container {
+        margin: auto ;
+     }
+   }
+.head_ing{
+    margin:auto ;
+    color: white;
+    font-size: 40px ;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.container{
+    /* border: 1px solid black; */
+    height: fit-content;
+   background-color: white;
+    padding:1em;
+    width: 30vw;
+    margin-top: 12vh;
+    /* margin-right: 10vw; */
+    border-radius: 35px;
+    /* padding:; */
+}
+/*--media query--*/
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 40vw;
+        margin-right: 15vw;
+        
+     }
+   }
+@media (max-width: 1024px) and (min-width: 786px) {
+    .container {
+        width: 40vw;
+        margin-right: 15vw;
+     }
+   }
+
+@media screen and (max-width: 786px) {
+    .container {
+        width: 60vw;
+     }
+   }
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90vw;
+     }
+   }
+
+.top{
+    text-align: center;
+    font-size: 35px;
+    font-family: Arial;
+    font-weight: bolder;
+    margin-bottom: 15%;
+}
+.top_2{
+    
+    text-align: center;
+    font-size: 35px;
+    font-family: Arial;
+    font-weight: bolder;
+    margin-bottom: 5%;
+}
+.form_cont{
+
+    padding: 2%;
+}
+.form_cont div{
+    position: relative;
+    max-width:100%;
+    margin:8% 2% ;
+    padding: 0;
+    text-align: center;
+   
+}
+.form_cont div input{
+    height:45px;
+    width: 86%;
+    padding: 0% 0% 0% 10% ;
+    font-size: 16px;
+    border:1px solid grey;
+    border-radius: 20px;
+    outline: none;
+    box-shadow: 0px 0px 10px 2px grey;
+}
+.form_cont div .role_select{
+    height:45px;
+    width: 95%;
+    padding: 0% 0% 0% 10% ;
+    font-size: 16px;
+    border:1px solid grey;
+    border-radius: 20px;
+    outline: none;
+    box-shadow: 0px 0px 10px 2px grey;
+}
+
+.form_cont .button{
+    width: 95%;
+    padding: 2%;
+    font-size: 25px;
+    border-radius: 35px;
+    border: none;
+    color:white;
+    background: linear-gradient(188deg, rgba(78,95,222,1) 18%, rgba(84,244,235,1) 58%, rgba(129,62,218,1) 97%);
+}
+.form_cont .button:hover{
+    background: linear-gradient(356deg, rgba(78,199,222,1) 18%, rgba(111,244,84,1) 53%, rgba(236,114,80,1) 97%);
+}

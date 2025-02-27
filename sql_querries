@@ -1,0 +1,18 @@
+-- creating a admin table
+CREATE TABLE `leave_management`.`admin_data` (`id` INT NOT NULL AUTO_INCREMENT , `role` VARCHAR(20) NOT NULL , `fname` VARCHAR(256) NOT NULL , `lname` VARCHAR(256) NOT NULL , `email` VARCHAR(256) NOT NULL , `password` VARCHAR(256) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+-- alter table 
+ALTER TABLE `admin_data` ADD `phone` INT(12) NOT NULL AFTER `email`, ADD `username` VARCHAR(50) NOT NULL AFTER `phone`;
+-- update single data value 
+UPDATE `admin_data` SET `role` = 'Admin' WHERE `admin_data`.`id` = 1;
+-- select only from a specific column  without duplicate value 
+SELECT DISTINCT `lname` FROM `user_data`;
+
+<?php 
+                        $option = "SELECT DISTINCT `lname` FROM `user_data`";
+                        $option_result = mysqli_query($conn, $option);
+                        while ($option_data = mysqli_fetch_assoc($option_result)){
+                            
+                        ?>
+                    <option value="<?php echo $option_data['lname'] ; ?>"><?php echo  $option_data['lname'] ; ?></option>
+                    
+                   <?php }?>
